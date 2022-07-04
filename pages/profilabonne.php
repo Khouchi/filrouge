@@ -11,55 +11,28 @@
     <meta name="generator" content="Hugo 0.84.0">
     <title>Profil</title>
 
-    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/navbar-static/">
+  
 
     
 
     <!-- Bootstrap core CSS -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-      <!--profile-->
-      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
-<!-- Google Fonts -->
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
-<!-- Bootstrap core CSS -->
-<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
-<!-- Material Design Bootstrap -->
-<!--<link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">-->
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="icon" type="image/x-icon" href="../assets/image/m34crossfit.png" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
-<style>
-      .bd-placeholder-img {
-        font-size: 1.125rem;
-        text-anchor: middle;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        user-select: none;
-      }
 
-      @media (min-width: 768px) {
-        .bd-placeholder-img-lg {
-          font-size: 3.5rem;
-        }
-      }
-    </style>
- <link href="navbar-top.css" rel="stylesheet">
-    
-    <!-- Favicons -->
-<link rel="apple-touch-icon" href="/docs/5.0/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
-<link rel="icon" href="/docs/5.0/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
-<link rel="icon" href="/docs/5.0/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
-<link rel="manifest" href="/docs/5.0/assets/img/favicons/manifest.json">
-<link rel="mask-icon" href="/docs/5.0/assets/img/favicons/safari-pinned-tab.svg" color="#7952b3">
-<link rel="icon" href="/docs/5.0/assets/img/favicons/favicon.ico">
-<meta name="theme-color" content="#7952b3">
+
+
 
   </head>
-  <body class="bg-light">
+  <body class="bg-light" class="body">
     <?php include('menuabonne.php');?>
     <br>
   <div class="container">
        <form class="" id="" name="" method="post" action="modifierinfoabonne.php">
-     	<div class="row d-flex justify-content-center" style="margin-top:-30px">
-            <div class="col-md-10 mt-5 pt-5">
+     	<div class="row d-flex justify-content-center" style="margin-top:-40px">
+            <div class="col-md-12 mt-8 pt-5">
              	<div class="row z-depth-3" >
                  	<div class="col-sm-4 bg-dark rounded-left" style="color:green">
         		        <div class="card-block text-center text-white">
@@ -68,8 +41,8 @@
                     		<p><?php echo $_SESSION['user']['abonnement'];?></p><i class="far fa-edit fa-2x mb-4"></i>
                 		</div>
             		</div>
-            		<div class="col-sm-8 bg-white rounded-right">
-                    	<h3 class="mt-3 text-center">Information</h3>
+            		<div class="col-sm-8  rounded-right">
+                    	<h3 class="mt-3 text-center text-danger">Information</h3>
                     	<hr class="bg-dark mt-0 w-25">
                    		<div class="row">
                         	<div class="col-sm-6">
@@ -93,6 +66,32 @@
                             	<h6 class="text-muted"><?php echo $_SESSION['user']['abonnement'];?></h6>
                         	</div>
                     	</div>
+                      <!-- <div class="row">
+                        	<div class="col-sm-6">
+                          <p class="font-weight-bold">adresse</p>
+                            	<h6 class="text-muted"><?php echo $_SESSION['user']['adresse'];?></h6>
+                        	</div>
+                        	<div class="col-sm-6">
+                          <p class="font-weight-bold">code postal</p>
+                            	<h6 class="text-muted"><?php echo $_SESSION['user']['zip'];?></h6>
+                        	</div>
+                    	</div>
+                      <div class="row">
+                        	<div class="col-sm-6">
+                          <p class="font-weight-bold">ville</p>
+                            	<h6 class="text-muted"><?php echo $_SESSION['user']['ville'];?></h6>
+                        	</div>
+                        	<div class="col-sm-6">
+                          <p class="font-weight-bold">Mot de passe</p>
+                            	<h6 class="text-muted"><?php echo $_SESSION['user']['motdepasse'];?></h6>
+                        	</div>
+                    	</div> -->
+                     
+                      <!-- <div class="col-sm-6">
+                            
+                        	</div>
+                    	</div> -->
+                 
                 	   	<hr class="bg-dark">
                 	    <ul class="list-unstyled d-flex justify-content-center mt-4">
                             <input type="submit" style="background-color:#A9A9A9;color:white;border-radius: 10px;" value="modifier mes informations">
@@ -103,6 +102,7 @@
         </div>
       </form>
   </div>
+  <br><br><br>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
 

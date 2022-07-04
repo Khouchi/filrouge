@@ -1,4 +1,4 @@
- <?php
+<?php
 
 require_once("connexiondb.php");
 
@@ -13,16 +13,25 @@ require_once("connexiondb.php");
   $email=$_POST['email'];
   $date=$_POST['date'];
   $nom=$_POST['nom'];
-  $telephone=$_POST['telephone'];
-  $abonnement=$_POST['abonnement'];
   $salle=$_POST['salle'];
-  $mt=$_POST['mt'];
+  $abonnement=$_POST['abonnement'];
+  $telephone=$_POST['telephone'];
+  $mt= password_hash($_POST['mt'],PASSWORD_DEFAULT);
+  $prenom=$_POST['prenom'];
+  $adresse=$_POST['adresse'];
+  $zip=$_POST['zip'];
+  $ville=$_POST['ville'];
+  
+  
+  
+  
+  
   
  if (in_array($photoExtActu,$autoriser)){
       move_uploaded_file($_FILES['photo']['tmp_name'],"../images/".$_FILES['photo']['name']);
      
-      $requete="INSERT INTO abonnes (email,dateNaissance,nom,salle,abonnement,telephone,motdepasse,photo) VALUES (?,?,?,?,?,?,?,?)";
-      $params=array($email,$date,$nom,$salle,$abonnement,$telephone,$mt,$photo);
+      $requete="INSERT INTO abonnes (email,dateNaissance,nom,adresse,abonnement,telephone,motdepasse,photo,ville,prenom,zip,salle) VALUES (?,?,?,?,?,?,?,?,?,?,?,?)";
+      $params=array($email,$date,$nom,$adresse,$abonnement,$telephone,$mt,$photo,$ville,$prenom,$zip,$salle);
       $resultat=$pdo->prepare($requete);
       $resultat->execute($params);?>
       <html>
@@ -32,7 +41,7 @@ require_once("connexiondb.php");
     <script>
         swal({
           icon: "success",
-          title: "BRAVO!",
+          title: "Bravo !",
           text: "  Félicitations, votre compte est créé, mais temporairement inactif jusqu'à son activation par l'administrateur !",
           showConfirmButton: true,
           confirmButtonText: "Cerrar",

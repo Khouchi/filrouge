@@ -1,0 +1,258 @@
+.pagination a {
+    color: green;
+    background-color: white;
+    float: left;
+    margin-top: 20%;
+    padding: 8px 16px;
+    text-decoration: none;
+    border-radius: 30px 30px 30px 30px;
+   }
+
+   :root{
+    --Vert :#80AA6C;
+    --noir:black;
+    --blanc:white;
+    --rouge:#C54F4C;
+    --gris:#D2D2D2;
+    --gray:#E4E4E4;
+ 
+    }
+    .body{
+        background-color: var(--gris);
+        font: italic 1.2em "Fira Sans", serif;
+    }
+    
+
+    /* home */
+    .hero{
+        height: 650px;
+        background:var(--gris) ;
+        display: flex;
+        overflow: hidden;
+    }
+    .home-left{
+        position: relative;
+        width: 40%;
+        height: 100%;
+        /* box-shadow:90px 0 100px 100px var(--N) ; */
+    }
+    .home-left h1{
+        color: var(--Vert);
+        font-size: 30px;
+        padding-top: 150px;
+        padding-bottom: 20px;
+        margin-left: 3vw;
+        white-space: nowrap;
+        text-transform: uppercase;
+
+    }
+    .home-left p{
+        color: var(--noir);
+        font-size: 19px;
+        width: 90%;
+        margin-left: 1.2vw;
+        line-height: 1.5;
+        /* text-transform: uppercase; */
+    }
+
+    .btn-left{
+        text-align: center;
+    }
+  .btn-left a {
+        color:var(--blanc);
+        text-decoration: none;
+      }
+     .btn-left a:hover {
+        color: var(--blanc);
+        background: #50494b;
+        box-shadow:  0 0 5PX #50494b,0 0 25px #50494b,0 0 50px #50494b, 0 0 200px #50494b;
+      }
+      
+     .btn-left a:not([href]):not([class]), a:not([href]):not([class]):hover {
+        color: inherit;
+        text-decoration: none;
+      } 
+      
+
+      .home-right{
+          background-image: url(../assets/image/006.jpg ) ;
+          width: 60%;
+          height: 700px;
+          background-position:45% 45%  ;
+          object-fit: cover;
+}
+
+     /* option */
+  
+
+
+.card-footer:last-child {
+    border-radius: 0!important;
+    background-color: #50494b;
+
+}
+
+.card-footer {
+    padding: 0!important;
+    background-color: unset!important;
+    border-top: unset!important;
+}
+
+.text-center {
+    color: #fff;
+}
+
+.card-img-overlay {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 100%;   
+}
+.containe{    background: var(--gris);
+    background-color: var(--gris);
+}
+#option{
+    width: 95%;
+    margin: auto;
+
+}
+.option{
+    background-color: var(--gris);
+ }
+
+ /* le crossFit */
+.mode{
+    width: 90%;
+    margin: auto;
+} 
+
+/* map */
+.map-responsive iframe{
+    left:0;
+    top:0;
+    height:50%;
+    width: 90%;
+    position:absolute;
+    margin: auto;
+}
+#option{background-color: var(--noir);
+width: 100%;
+height: 50px;
+
+}
+
+
+    
+    .card.map-card .living-coral {
+    background-color: #fa7268;
+    }
+    
+    .card.map-card .living-coral-text {
+    color: #fa7268;
+    }
+    
+    .card.map-card .table th {
+    width: 2rem;
+    }
+    
+    .card.map-card .pt-3-5 {
+    padding-top: 1.25rem;
+    }
+    
+    .card.map-card .card-body {
+    position: absolute;
+    width: 100%;
+    height: 80%;
+    top: 20%;
+    overflow: hidden;
+    background-color: transparent;
+    -webkit-transition: all 1s;
+    -o-transition: all 1s;
+    transition: all 1s;
+    -webkit-border-radius: 0 !important;
+    border-radius: 0 !important;
+    }
+    
+    .card.map-card .card-body.closed {
+    top: 100%;
+    height: 7.5rem;
+    margin-top: -7.5rem;
+    }
+    
+    .card.map-card .map-container {
+    overflow: hidden;
+    padding-bottom: 56.25%;
+    position: relative;
+    height: 0;
+    }
+    
+    .card.map-card .map-container iframe {
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    }
+    
+    .card.map-card .button .btn-floating {
+    margin-top: -1.5rem;
+    }
+    #maps{
+        background: var(--gris);
+    } 
+    
+
+
+    /* connexion */
+    .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+     
+          h1{
+              text-align: center;
+              margin-left: 100px;
+          }
+          .insc{
+           text-align: right;
+           margin-top: -30px;
+          }
+          .loginform{
+           
+            width: 55%;
+            height: 100%;
+            padding: 25px 25px 25px 25px;
+            border-radius: 20px;
+            margin-left: 300px;
+          }
+     
+ 
+/* evenement */
+
+
+.bouttonevenement{
+   margin: 12px 470px;
+}
+.lignecolor{
+  background: white;
+  text-align: center;
+}
+.tablecolor{
+  background: #228B22;
+  color: white;
+  font-weight: bold;
+  font-family:serif;
+  padding: 12px 15px;
+  text-align: center;
+}
+.tablecontent{
+  border-radius: 10px 10px 0 0;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0,0,0,0.15);
+  width: 100%;
+  height: 100%;
+} 

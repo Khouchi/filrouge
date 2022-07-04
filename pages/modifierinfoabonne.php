@@ -11,55 +11,13 @@
     <meta name="generator" content="Hugo 0.84.0">
     <title>modifier mes informations par abonné</title>
 
-    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/navbar-static/">
+    <!--CSS Bootstap -->
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="icon" type="image/x-icon" href="../assets/image/m34crossfit.png" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
-    
 
-    <!-- Bootstrap core CSS -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-
-<style>
-      .bd-placeholder-img {
-        font-size: 1.125rem;
-        text-anchor: middle;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        user-select: none;
-      }
-
-      @media (min-width: 768px) {
-        .bd-placeholder-img-lg {
-          font-size: 3.5rem;
-        }
-      }
-      .inscform{
-            background: white;
-            width: 55%;
-            height: 100%;
-            padding: 25px 25px 25px 25px;
-            border-radius: 20px;
-            margin-left: 300px;
-          }
-      .container img{
-              width: 120px;
-              height: 120px;
-              margin-top: -30px;
-              margin-bottom: 30px;
-              margin-right: 100px;
-              margin-left: 550px;
-          }
-          h1{
-              text-align: center;
-              margin-left: 100px;
-          }
-          .insc{
-           text-align: right;
-           margin-top: -30px;
-          }
-    </style>
- <link href="navbar-top.css" rel="stylesheet">
-    
-    <!-- Favicons -->
 
   </head>
   <body>
@@ -67,63 +25,120 @@
     
     <div class="container">
     
-  <div class="inscform">
-      
-     <form class="" id="" name="" method="post" action="modificationinfoabonne.php">
-      <div class="row">
-      <div class="form-group col-12">
-            <label>Email</label>
+  <!--  -->
+             
+  <div class="container">
+   
+    
+   <div class="inscform">
+       
+      <form class="" id="" name="" enctype="multipart/form-data" method="post" action="modificationinfoabonne.php">
+       <div class="row">
+       <div class="form-group col-12"> 
+             <label >Photo</label>
+             <input type="file" name="photo" class="form-control" id="photo" placeholder="photo" value="<?php echo $_SESSION['user']['photo'];?>">     
+          </div>
+       </div>  
+       <div class="row">
+       <div class="form-group col-6"> 
+            
+             <label>Email</label>
             <input type="hidden" name="id" class="form-control" placeholder="id" value="<?php echo $_SESSION['user']['idemp'];?>">
-            <input type="email" name="email" class="form-control" placeholder="Email" value="<?php echo $_SESSION['user']['email'];?>">     
-         </div>
-         <div class="form-group col-12"> 
-             <label>Date de naissance</label>
-            <input type="date" name="date" class="form-control" placeholder="Date de naissance" value="<?php echo $_SESSION['user']['dateNaissance'];?>">      
-         </div>
-      </div>
-    <div class="row">
-      <div class="form-group col-12">
-              <label>Nom d'utilisateur</label>
-            <input type="text" name="nom" class="form-control" placeholder="Nom d'utilisateur" value="<?php echo $_SESSION['user']['nom'];?>">   
-         </div>
-     <div class="form-group col-12">
-             <label>Téléphone</label>
-            <input type="number" name="telephone" class="form-control" placeholder="Téléphone" value="<?php echo $_SESSION['user']['telephone'];?>">   
-         </div>
-         </div>
+            <input type="email" name="email" class="form-control" placeholder="Email" value="<?php echo $_SESSION['user']['email'];?>">      
+          </div>
+          <div class="form-group col-6"> 
+          <label>Date de naissance</label>
+            <input type="date" name="date" class="form-control" placeholder="Date de naissance" value="<?php echo $_SESSION['user']['dateNaissance'];?>">   
+          </div>
+       </div>
      <div class="row">
-      <div class="form-group col-12">
-              <label>Salle</label>
-            <input type="text" name="salle" class="form-control" placeholder="Salle" value="<?php echo $_SESSION['user']['salle'];?>">   
-         </div>
-     <div class="form-group col-12">
-             <label>Abonnement</label>
-            <input type="text" name="abonnement" class="form-control" placeholder="abonnement" value="<?php echo $_SESSION['user']['abonnement'];?>">   
-         </div>
-         </div>
-         <div class="row">
-      <div class="form-group col-12">
-              <label>Mot de passe</label>
-            <input type="password" name="mt" class="form-control" placeholder="mot de passe" value="<?php echo $_SESSION['user']['motdepasse'];?>">   
-         </div>
-         </div>
+       <div class="form-group col-6">
+             <label>Nom </label>
+            <input type="text" name="nom" class="form-control" placeholder="Nom " value="<?php echo $_SESSION['user']['nom'];?>">  
+          </div>
+      <div class="form-group col-6">
+      <label>Téléphone</label>
+            <input type="number" name="telephone" class="form-control" placeholder="Téléphone" value="<?php echo $_SESSION['user']['telephone'];?>">    
+          </div>
+          </div>
+          <div class="row">
+       <div class="form-group col-6">
+       <label>prenom </label>
+            <input type="text" name="prenom" class="form-control" placeholder="prenom" value="<?php echo $_SESSION['user']['prenom'];?>">  
+          </div>
+      <div class="form-group col-6">
+              <label>code postal</label>
+             <input type="number" name="zip" class="form-control" id="zip" placeholder="code postal"value="<?php echo $_SESSION['user']['zip'];?>">   
+          </div>
+          </div>
+          <div class="row">
+       <div class="form-group col-6">
+               <label>ville </label>
+             <input type="text" name="ville" class="form-control" id="ville" placeholder="ville"value="<?php echo $_SESSION['user']['ville'];?>">   
+          </div>
+          <div class="form-group col-6">
+               <label>adresse </label>
+             <input type="text" name="adresse" class="form-control" id="adresse" placeholder="adresse" value="<?php echo $_SESSION['user']['adresse'];?>">   
+          </div>
      
-    <br>     
-    <div class="row">
+          </div>
+      <!-- <div class="row">
+       <div class="form-group col-6">
+               <label>Abonnement</label>
+         
+             <select type="text" name="abonnement" class="form-control" placeholder="abonnement" value="<?php echo $_SESSION['user']['abonnement'];?>">
+             <option>Carnet 10 seances</option>
+            <option >1 séance par semaine</option>
+             <option >1 à 2 séances par semaine</option> 
+             <option>1 à 4 séances par semaine</option> 
+             <option>Crossfit 5</option> </select>
+             
+          </div>
+      <div class="form-group col-6">
+              <label>Salle</label>
+             <select type="text" name="salle" class="form-control" placeholder="Salle" value="<?php echo $_SESSION['user']['salle'];?>">
+            <option >Initial</option>
+             <option >East</option>
+             <option>South</option>           
+            </select>   
+          </div>
+          </div> -->
+      <div class="row">
+       <div class="form-group col-6">
+       <label>Mot de passe</label>
+            <input type="password" name="mt" class="form-control" placeholder="mot de passe" value="<?php echo $_SESSION['user']['motdepasse'];?>">   
+          </div>
+      
+      </div>
+     <br>     
+     <div class="row">
     <div class="form-group col-6">
     <input type="submit" class="btn btn-success" value="modifier">
     </div>    
     </div>    
      </form> 
-  </div>      
-  
+  </div>   
+           
+   
+   </div>
+
+ 
+        </div>
+      </div>
+
   </div>
 
+            </div>
 
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
+            <br><br>
+
+    
 
 
+
+  <!--JS Bootstrap -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 
   </body>
 </html>

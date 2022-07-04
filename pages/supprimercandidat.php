@@ -3,15 +3,15 @@
   if (isset($_SESSION['user'])){
   require_once("connexiondb.php");
 
-  $id=$_GET['idevenement'];
-  $requete="delete from evenement where idevenement=$id";
+  $id=$_GET['idcand'];
+  $requete="delete from candidats where idcand=$id";
   $resultat=$pdo->prepare($requete);
   $resultat->execute();
 
   }
 ?>
 
-<html>
+ <html>
      <body>
      
    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
@@ -19,12 +19,12 @@
         swal({
           icon: "success",
           title: "bon travail !",
-          text: "la réunion a été supprimé avec succès ! ",
+          text: "Le candidat a été supprimé avec succès!",
           showConfirmButton: true,
           confirmButtonText: "Cerrar",
           closeOnConfirm: false
          }). then(function(result){
-            window.location = "evenement.php";
+            window.location = "recrutement.php";
              })
          </script>     
 

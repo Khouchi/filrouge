@@ -33,7 +33,7 @@
          <html>
      <body>
      
-   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  
     <script>
         swal({
           icon: "success",
@@ -53,7 +53,6 @@ else { ?>
      <html>
      <body>
      
-   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script>
         swal({
           icon: "warning",

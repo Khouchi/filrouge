@@ -32,89 +32,27 @@
     <meta name="generator" content="Hugo 0.84.0">
     <title>abonnes archivés</title>
 
-    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/navbar-static/">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Festive&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
-    <link rel="stylesheet" href="chercherStyle.css">
-      
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+ 
+<!--CSS Bootstap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+<link rel="icon" type="image/x-icon" href="../assets/image/m34crossfit.png" />
+
+
     
+  
 
-    <!-- Bootstrap core CSS -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-
-<style>
-      .bd-placeholder-img {
-        font-size: 1.125rem;
-        text-anchor: middle;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        user-select: none;
-      }
-
-      @media (min-width: 768px) {
-        .bd-placeholder-img-lg {
-          font-size: 3.5rem;
-        }
-      }
-      .lignecolor{
-        background: white;
-        text-align: center;
-    }
-      .tablecolor{
-        background: #228B22;
-        color: white;
-        font-weight: bold;
-        font-family:serif;
-        padding: 12px 15px;
-        text-align: center;
-    }
-      .tablecontent{
-        border-radius: 10px 10px 0 0;
-        overflow: hidden;
-        box-shadow: 0 0 20px rgba(0,0,0,0.15);
-        width: 100%;
-        height: 100%;
-    }
-    .pagination {
-     display: inline-block;
-
-     
-     }
-
-   .pagination a {
-     color: green;
-     background-color: white;
-     float: left;
-     margin-top: 20%;
-     padding: 8px 16px;
-     text-decoration: none;
-     border-radius: 30px 30px 30px 30px;
-    }
-    </style>
- <link href="navbar-top.css" rel="stylesheet">
-    
-    <!-- Favicons -->
-<link rel="apple-touch-icon" href="/docs/5.0/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
-<link rel="icon" href="/docs/5.0/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
-<link rel="icon" href="/docs/5.0/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
-<link rel="manifest" href="/docs/5.0/assets/img/favicons/manifest.json">
-<link rel="mask-icon" href="/docs/5.0/assets/img/favicons/safari-pinned-tab.svg" color="#7952b3">
-<link rel="icon" href="/docs/5.0/assets/img/favicons/favicon.ico">
-<meta name="theme-color" content="#7952b3">
 
   </head>
   <body>
     <?php include('menuRH.php');?>
     <br>
+  
+
   <div class="container">
        
        <div class="panel panel-success margetop">
-   <div  class="panel-heading" style=" display: inline-block;width: 500px;height: 100px;color:white;font-size:xx-large;">> Liste des abonnes archivés</div>
+   <h1>> Liste des abonnes archivés</h1>
+   <br>
     <div class="panel-body">
        <form method="get" action="archives.php">
        <div class="search-box" style="margin-left:13em">
@@ -123,35 +61,35 @@
        <input type="text" name="nomE" class="input-search" placeholder="Tapez pour chercher...">
   </div>
         </form>
-    <form method="get" action="modifierabonnesarchives.php">
-    <div class="panel-body">
-        <table class=tablecontent>
-        <thead class=tablecolor>
-         <tr>
-            <th></th>
-            <th>NOM</th>
-            <th>ABONNEMENT</th>
-            <th>EMAIL</th>
-            <th>TELEPHONE</th>
-            <th>SALLE</th>
-            <th>ACTION</th>
+        <br>
+       <!-- tableau -->
+
+       <div class="table-responsive">
+        <table class="table table-striped table-sm ">
+          <thead>
+            <tr class="btn-success">
+              <th scope="col"></th>
+              <th scope="col">NOM</th>
+              <th scope="col">abonnement</th>
+              <th scope="col">EMAIL</th>
+              <th scope="col">TELEPHONE</th>
+              <th scope="col">salle</th>
+              <th scope="col">action</th>
             </tr>
-        
-        </thead>
-        <tbody>
-            <?php while($abonnesarchiver=$resultatR->fetch()){ ?>
+          </thead>
+
+          <tbody>
+          <?php while($employesarchiver=$resultatR->fetch()){ ?>
             <tr class=lignecolor>
-            <td><img style="width:80px;height:80px;border-radius:500px;" src="../images/<?php echo $abonnesarchiver['photo']?>"/></td>
-            <td><?php echo $abonnesarchiver['nom'] ?></td>
-            <td><?php echo $abonnesarchiver['abonnement'] ?></td>
-            <td><?php echo $abonnesarchiver['email'] ?></td>
-            <td><?php echo $abonnesarchiver['telephone'] ?></td>
-            <td><?php echo $abonnesarchiver['salle'] ?></td>
+            <td><img style="width:80px;height:80px;border-radius:500px;" src="../images/<?php echo $employesarchiver['photo']?>"/></td>
+            <td><?php echo $employesarchiver['nom'] ?></td>
+            <td><?php echo $employesarchiver['abonnement'] ?></td>
+            <td><?php echo $employesarchiver['email'] ?></td>
+            <td><?php echo $employesarchiver['telephone'] ?></td>
+            <td><?php echo $employesarchiver['salle'] ?></td>
             <td>
-            <a href="modifierabonnearchives.php?idemp=<?php echo $abonnesarchiver['idemp']; ?>" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
-           
-           
-            <a onclick="return confirm('Etes vous sûr de vouloir supprimer l\'abonné')" href="supprimerabonnearchives.php?idemp=<?php echo $abonnesarchiver['idemp']; ?>" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a></td>
+            <a href="modifieremployesarchives.php?idemp=<?php echo $employesarchiver['idemp']; ?>" class="edit" data-toggle="modal"><img src="../images/pencil-square.svg" alt=""><i class="bi bi-pencil-square"></i></a>
+            <a onclick="return confirm('Etes vous sûr de vouloir supprimer l\'employé')" href="supprimeremployesarchives.php?idemp=<?php echo $employesarchiver['idemp']; ?>" class="delete" data-toggle="modal"><img src="../assets/image/trash.svg" alt=""><i class="bi bi-trash3-fill"></i></a></td>
             </tr>
             <?php } ?>
             </tbody>
@@ -169,10 +107,12 @@
   </div>
       </div>
 
+            
+        
+       
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/cb35c347cc.js" crossorigin="anonymous"></script>
 
 
   </body>

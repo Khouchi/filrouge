@@ -6,7 +6,7 @@
   $debutdeevenement=$_POST['debutdeevenement'];
   $heure=$_POST['heure'];
  
-  $requete="INSERT INTO evenement (titre, type, dateevenement, heureevenement) VALUES (?,?, ?,?)";
+  $requete="INSERT INTO evenement (titre,type, dateevenement, heureevenement) VALUES (?,?, ?,?)";
   $params=array($titre,$type,$debutdeevenement,$heure);
   $resultat=$pdo->prepare($requete);
   $resultat->execute($params);

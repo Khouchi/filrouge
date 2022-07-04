@@ -4,11 +4,11 @@
   $id=$_POST['id']; 
   $mt=$_POST['mt']; 
   $email=$_POST['email'];
- 
+  $salle=$_POST['salle'];
   $poste=$_POST['poste'];
  
-  $requete="update rh set email=?,motdepasse=?,poste=?, where idrh=?";
-  $params=array($email,$mt,$poste,$id);
+  $requete="update rh set email=?,motdepasse=?,poste=?,salle=? where idrh=?";
+  $params=array($email,$mt,$poste,$salle,$id);
   $resultat=$pdo->prepare($requete);
   $resultat->execute($params);
 ?>
@@ -30,3 +30,4 @@
          </script>     
 
      </body></html>
+

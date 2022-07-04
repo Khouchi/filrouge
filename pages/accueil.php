@@ -5,53 +5,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>M34CrossFit</title>
-    <link rel="stylesheet" href="../assets/css/reset.css">
-    <link rel="stylesheet" href="../assets/css/style.css">
+
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/style.css">
     <link rel="icon" type="image/x-icon" href="../assets/image/m34crossfit.png" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet"/>
 
 
 </head>
 <body class="body">
-<!--NAV-->
- 
-  </head>
-  <body>
-  <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark " id="mainNav">
-    <div class="container">
-        <a class="navbar-brand" href="#page-top"><img src="assets/image/m34crossfit.png" alt=""></a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-            Menu
-            <i class="fas fa-bars ms-1"></i>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-         
-               <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-                 
-                    <li><a href="index.php" class="nav-link px-2 text-secondary">ACCUEIL</a></li>
-                    <li><a href="#" class="nav-link px-2 text-light">ABONNEMENTS</a></li>
-                    <li><a href="tarif.php" class="nav-link px-2 text-light">TARIF</a></li>
-                    
-                   
-                  </ul>
-            </ul>
+<!-- menu -->
+      <?php include('menu.php');?>
+    <br>
 
-        
-        <div class="text-end">
-          <!-- <button type="button" class="btn btn-outline-light me-2">S'inscrire</button> -->
-          <a class="btn btn-dark bg-danger btn-xl text-light"  href="inscription.php">inscription</a>
-          <a class="btn btn-dark bg-success btn-xl text-light"  href="connexion.php">Connexion</a>
-          
-        </div>
-     
-    </div>
-    </div>
-</nav>
-
-<br/>
-<body>
-    
    <!--Home-->
 
 <div id="home" class="hero">
@@ -214,15 +180,12 @@
 <!--Google map-->
 
   
-<section class="option">
-  <div class="album py-5 "  >
-    <div class="containe">
 
 <div class="container" >
-  <section class="mx-auto my-5" style="max-width: 100%;" > 
+  <section class="mx-auto my-5" style="max-width: 100%; "> 
 
     <div class="card map-card">
-      <div id="map-container-google-1" class="z-depth-1-half map-container" style="height: 50px">
+      <div id="map-container-google-1" class="z-depth-1-half map-container" style="height: 150px">
         <!-- <iframe src="https://maps.google.com/maps?q=manhatan&t=&z=13&ie=UTF8&iwloc=&output=embed"
         
           frameborder="0" style="border:0" allowfullscreen></iframe> -->
@@ -251,6 +214,7 @@
 <!--Google Maps-->
 
     <footer id="footer" class="text-center text-white" style="background-color: black;">
+    <a href="candidature.php">Votre Candidature</a>
       <!-- Grid container -->
       <div class="container p-4">
         <!-- Section: Images -->
@@ -377,7 +341,7 @@
         <div class="container">
           <div class="row ">
               <div class="col-12">
-                  <div class="line"></div>
+                 
                   <div class="second2 ">
                       <a href="#" target="_blank"> <i class="fab fa-facebook fa-2x margin "></i></a>
                       <a href="#"><i targer="_blank" class="fab fa-instagram fa-2x margin " aria-hidden="true"></i></a>
@@ -412,3 +376,5 @@
     <script src="assets/js/script.js"></script>  
 </body>
 </html>
+
+<?php echo password_hash(1234,PASSWORD_DEFAULT);

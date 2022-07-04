@@ -31,7 +31,7 @@
           confirmButtonText: "Cerrar",
           closeOnConfirm: false
          }). then(function(result){
-            window.location = "abonne.php";
+            window.location = "abonne/abonne.php";
              })
          </script>     
 

@@ -7,6 +7,9 @@ else{
 }
 session_destroy();
 ?>
+
+
+</body>
 <!doctype html>
 <html lang="fr">
   <head>
@@ -16,61 +19,27 @@ session_destroy();
     <meta name="generator" content="Hugo 0.84.0">
     <title>connexion</title>
 
-    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/navbar-static/">
-    <link rel="stylesheet" href="fichier.css">
+ 
+
     
 
-    <!-- Bootstrap core CSS -->
-    <link rel="stylesheet" href="../assets/css/reset.css">
-    <link rel="stylesheet" href="../assets/css/style.css">
+   
+  <!--CSS Bootstap -->
+  <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/style.css">
     <link rel="icon" type="image/x-icon" href="../assets/image/m34crossfit.png" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet"/>
 
-    <style>
-      .bd-placeholder-img {
-        font-size: 1.125rem;
-        text-anchor: middle;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        user-select: none;
-      }
-
-     
-          h1{
-              text-align: center;
-              margin-left: 100px;
-          }
-          .insc{
-           text-align: right;
-           margin-top: -30px;
-          }
-          .loginform{
-            background: white;
-            width: 55%;
-            height: 100%;
-            padding: 25px 25px 25px 25px;
-            border-radius: 20px;
-            margin-left: 300px;
-          }
-     
-      
-    </style>
- <link href="navbar-top.css" rel="stylesheet">
     
     <!-- Favicons -->
 
 
   </head>
-  <body>
+  <body class="body">
     <?php include('menu.php');?>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
+    <br><br>
     <h1>Se connecter</h1>
-    <br> 
+ 
       
     <div class="container">
   
@@ -109,10 +78,10 @@ session_destroy();
   </div>      
   
   </div>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 
 
 
+  <!--JS Bootstrap -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
   </body>
 </html>
